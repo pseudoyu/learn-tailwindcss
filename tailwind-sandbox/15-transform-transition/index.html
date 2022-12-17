@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            transitionDuration: {
+              2000: '2000ms'
+            }
+          }
+        }
+      }
+    </script>
     <title>Transform & Transition</title>
   </head>
   <body>
@@ -16,40 +27,48 @@
     </button>
 
     <!-- Transition -->
+    <button class="px-8 py-2 m-24 text-white bg-blue-500 rounded hover:bg-blue-700 hover:opacity-20 transition duration-1000">
+      Click me
+    </button>
 
     <!-- Transition & Transform -->
+    <button class="px-8 py-2 m-24 text-white bg-blue-500 rounded hover:bg-blue-700 hover:rotate-12 transition-transform">
+      Click me
+    </button>
 
     <!-- Transform & Transition -->
+    <img src="../assets/img/img1.jpg" alt="" class="w-48 hover:rotate-180 hover:scale-75 hover:skew-x-12 transition duration-2000" />
+
   </body>
 </html>
 
 <!-- Transition Property
-  transition-none	            
+  transition-none
   transition-property: none;
 
-  transition-all	            
+  transition-all
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 
-  transition	
-  transition-property: color, background-color, border-color, 
-  text-decoration-color, fill, stroke, opacity, box-shadow, 
+  transition
+  transition-property: color, background-color, border-color,
+  text-decoration-color, fill, stroke, opacity, box-shadow,
   transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 
-  transition-colors	
+  transition-colors
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 
-  transition-opacity	
+  transition-opacity
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 
-  transition-shadow	
+  transition-shadow
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -59,7 +78,7 @@
   transition-duration: 150ms;
 -->
 
-<!-- 
+<!--
   Duration
   duration-75	    transition-duration: 75ms;
   duration-100	  transition-duration: 100ms;
